@@ -16,3 +16,7 @@ def display_board(arr)
   puts "-----------"
   puts " #{arr[6]} | #{arr[7]} | #{arr[8]} "
 end
+
+def input_to_index(num)
+  num.to_i - 1
+end

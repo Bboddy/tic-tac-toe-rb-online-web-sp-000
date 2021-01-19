@@ -28,3 +28,7 @@ end
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
+
+def valid_move?(board, pos)
+  (pos.between?(0,8) && !position_taken?(board, pos)) ? true : false
+end

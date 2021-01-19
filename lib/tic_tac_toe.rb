@@ -36,3 +36,7 @@ end
 def turn_count(board)
   board.count { |pos| pos == 'X' || pos == 'O' }
 end
+
+def current_player(board)
+  turn_count(board).even? ? "X" : "O"
+end

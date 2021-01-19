@@ -20,3 +20,7 @@ end
 def input_to_index(num)
   num.to_i - 1
 end
+
+def move(board, pos, char = "X")
+  board[pos] = char
+end

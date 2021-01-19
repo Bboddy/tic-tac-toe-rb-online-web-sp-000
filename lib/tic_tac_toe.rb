@@ -17,7 +17,7 @@ def display_board(arr)
   puts " #{arr[6]} | #{arr[7]} | #{arr[8]} "
 end
 
-def input_to_index(num)
+def input_to_pos(num)
   num.to_i - 1
 end
 
@@ -39,4 +39,16 @@ end
 
 def current_player(board)
   turn_count(board).even? ? "X" : "O"
+end
+
+def turn(board)
+  puts 'Please enter 1-9:'
+  input = gets.strip
+  pos = input_to_index(input)
+  if valid_move?(board, pos)
+    move(board, pos, current_player(board))
+    display_board(board)
+  else
+    turn(board)
+  end
 end

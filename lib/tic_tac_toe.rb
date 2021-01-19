@@ -34,5 +34,5 @@ def valid_move?(board, pos)
 end
 
 def turn_count(board)
-  board.count { |token| token == 'X' || token == 'O' }
+  board.count { |pos| pos == 'X' || pos == 'O' }
 end

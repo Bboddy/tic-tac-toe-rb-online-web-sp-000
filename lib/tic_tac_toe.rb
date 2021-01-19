@@ -32,3 +32,7 @@ end
 def valid_move?(board, pos)
   (pos.between?(0,8) && !position_taken?(board, pos)) ? true : false
 end
+
+def turn_count(board)
+  board.count { |token| token == 'X' || token == 'O' }
+end

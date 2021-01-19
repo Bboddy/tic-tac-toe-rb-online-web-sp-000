@@ -60,3 +60,21 @@ def won?(board)
     position_taken?(board, win[0])
   end
 end
+
+def full?(board)
+  board.all?{|index| index == "X" || index == "O"}
+end
+
+def draw?(board)
+  full?(board) && !won?(board)
+end
+
+def over?(board)
+  won?(board) || draw?(board)
+end
+
+def winner(board)
+  if winning_combo = won?(board)
+    board[winning_combo.first]
+  end
+end
